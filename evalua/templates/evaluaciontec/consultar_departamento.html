@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/darkly.min.css">
+    <title>Consultar Departamento</title>
+</head>
+
+<body style="background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(43, 46, 51, 0.747))">
+    <div class="container">
+        <h2><a style="color: rgb(5, 30, 255);" href="/index">Inicio</a></h2>
+        <table class="table table-bordered" style="background-image: linear-gradient(to left, rgb(92, 94, 224), rgb(59, 125, 192))">
+            <thead>
+                <tr>
+                    <td style="color: black;">ID</td>
+                    <td style="color: black;">NOMBRE</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% if object_list %} {% for departamento in object_list %}
+                <tr>
+                    <td style="color: black;">{{departamento.idDepartamento}}</td>
+                    <td style="color: black;">{{departamento.nombre}}</td>
+                </tr>
+                {% endfor %} {% else %}
+                <h1>No hay registros</h1>
+                {% endif %}
+
+            </tbody>
+        </table>
+    </div>
+</body>

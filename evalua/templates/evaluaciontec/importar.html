@@ -1,0 +1,13 @@
+<h2><a style="color: rgb(5, 30, 255);" href="/index" href="/index ">Inicio</a></h2>
+<br /> </p>
+<p>{% block content %}</p>
+<h3>Import Data</h3>
+<p>importing to database</p>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}<br />
+    <input type="file" name="importData"></p>
+    <p>Please select format of file.</p>
+    <p> <select name="file-format" class="form-control my-3"><option selected>Choose format...</option><option>CSV</option><option>JSON</option></select><br />
+        <button class="btn btn-primary" type="submit">Import</button><br />
+</form>
+<p><br /> {% endblock %}<br />

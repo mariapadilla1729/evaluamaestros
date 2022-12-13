@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/colores.css">
+    <title>Consultar Curso</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4><a href="/index">Inicio</a></h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>RFC</td>
+                    <td>Aspectos</td>
+                    <td>Puntaje</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% if object_list %} {% for curso in object_list %}
+                <tr>
+                    <td>{{cursos.rfc}}</td>
+                    <td>{{cursos.aspectos}}</td>
+                    <td>{{cursos.puntaje}}</td>
+                </tr>
+                {% endfor %} {% else %}
+                <h1>No hay registros</h1>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
